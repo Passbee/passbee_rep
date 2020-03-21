@@ -8,7 +8,7 @@ print(f"Good day {name}! {today} is a perfect day to learn some python.")
 print('-' * 100)
 #   TASK 2
 name1 = 'Ilya Pasichnyk'
-name_first = name1[:5]
+name_first = name1[:4]
 name_last = name1[5:]
 print('So you are %s %s, that\'s great' % (name_first, name_last))
 print(name_first + ' ' + name_last)
