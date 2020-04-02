@@ -10,7 +10,6 @@ class Product:
 
 class ProductStore:
     tax = 3.6
-    stock = dict
     budget = 0
 
     def __init__(self, *products):
@@ -27,7 +26,7 @@ class ProductStore:
             self.stock[product.name][2] -= quantity
             self.budget += self.stock[product.name][1] * quantity
         else:
-            print(f'You can\'t sell {quantity} pieces of {product.name}, because you have only {self.stock[product.name][2]} piece(s)')
+            raise Exception(f'You can\'t sell {quantity} pieces of {product.name}, because you have only {self.stock[product.name][2]} piece(s) left')
 
     def get_income(self):
         return f'You have {self.budget}$ in store budget'
