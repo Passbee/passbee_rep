@@ -1,7 +1,4 @@
 class Square:
-    def __init__(self, num_list):
-        self.num_list = num_list
-
     def square_nums(self):
         copy = self.num_list[:]
         for index in range(len(self.num_list)):
@@ -10,9 +7,6 @@ class Square:
 
 
 class Filter:
-    def __init__(self, num_list):
-        self.num_list = num_list
-
     def filter_leaps(self):
         copy = self.num_list[:]
         for year in self.num_list:
@@ -21,10 +15,7 @@ class Filter:
         return f'{self.num_list} -> {copy}'
 
 
-class Remove_positives:
-    def __init__(self, num_list):
-        self.num_list = num_list
-
+class RemovePositives:
     def remove_positives(self):
         copy = self.num_list[:]
         for item in self.num_list:
@@ -33,9 +24,9 @@ class Remove_positives:
         return f'{self.num_list} -> {copy}'
 
 
-class Mathematician(Square, Filter, Remove_positives):
+class Mathematician(Square, Filter, RemovePositives):
     def __init__(self, num_list):
-        super().__init__(num_list)
+        self.num_list = num_list
 
 
 if __name__ == '__main__':

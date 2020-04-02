@@ -1,10 +1,10 @@
 class Author:
 
-    def __init__(self, name, country, birthday, books):
+    def __init__(self, name, country, birthday):
         self.name = name
         self.country = country
         self.birthday = birthday
-        self.books = books
+        self.books = []
 
     def __repr__(self):
         return f'{self.name} - was born in {self.country} on {self.birthday}\nHe is author of those books - {self.books}'
@@ -14,6 +14,7 @@ class Author:
 
 
 class Book:
+
     def __init__(self, name, year):
         self.name = name
         self.year = year
